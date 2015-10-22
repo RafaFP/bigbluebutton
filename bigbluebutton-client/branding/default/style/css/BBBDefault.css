@@ -1019,3 +1019,11 @@ Alert {
 .moodSadStyle {
   icon:   Embed('assets/images/icon-7-sad-face.png');
 }
+
+.saveButtonStyle{
+  icon:   Embed('assets/images/ic_save_16px.png');
+}
+
+.copyButtonStyle{
+  icon:   Embed('assets/images/ic_content_copy_black_16px.png');
+}

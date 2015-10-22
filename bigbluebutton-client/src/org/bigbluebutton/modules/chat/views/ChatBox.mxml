@@ -191,10 +191,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				if(Capabilities.hasAccessibility)
 					Accessibility.updateProperties();
 				
-        trace(LOG + " onCreationComplete. Apply lock settings");
-        applyLockSettings();
-
-				//chatToolbar.registerListeners(chatMessagesList);
+				trace(LOG + " onCreationComplete. Apply lock settings");
+				applyLockSettings();
 
 				chatMessagesList.addEventListener(ChatEvent.RESIZE_CHAT_TOOLBAR, adjustToolbarWidthAccordingToScrollBar);
 			}
@@ -746,13 +744,13 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				tabIndex="{baseIndex+3}" />
 
 	  <mx:HBox id="buttonSCBar" width="100%" height="80" styleName="chatControlBarStyle" verticalScrollPolicy="off">
-			<mx:Button id="copyBtn" icon="@Embed(source='images/ic_content_copy_black_16px.png')" 
+			<mx:Button id="copyBtn" styleName="copyButtonStyle"
 			   width="30" height="26"
 			   toolTip="{ResourceUtil.getInstance().getString('bbb.chat.copyBtn.toolTip')}" 
 			   click="sendCopyEvent()"
 			   tabIndex="{baseIndex+2}"
 			   accessibilityName="{ResourceUtil.getInstance().getString('bbb.chat.copyBtn.accessibilityName')}"/>
-			<mx:Button id="saveBtn" icon="@Embed(source='images/ic_save_16px.png')" 
+			<mx:Button id="saveBtn" styleName="saveButtonStyle"
 			   width="30" height="26"
 			   toolTip="{ResourceUtil.getInstance().getString('bbb.chat.saveBtn.toolTip')}" 
 			   click="sendSaveEvent()"
