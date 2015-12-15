@@ -57,6 +57,10 @@ function removeFrame () {
           // permissions again resulting in the page reloading. (ralam june 17, 2015)
  //         div.innerHTML = "";
 //          div.parentNode.removeChild(div);
+          div.innerHTML =
+                "<applet code=\"\"" +
+                        "id=\"DeskShareApplet\" width=\"100\" height=\"10\" archive=\"\">" +
+                "</applet>";
         }
 }
 
