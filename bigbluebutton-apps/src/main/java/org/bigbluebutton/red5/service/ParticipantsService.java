@@ -139,6 +139,13 @@ public class ParticipantsService {
         return (BigBlueButtonSession) Red5.getConnectionLocal().getAttribute(Constants.SESSION);
     }
 
+	public void logoutEndMeeting(Map<String, Object> msg) {
+		IScope scope = Red5.getConnectionLocal().getScope();
+		String meetingId = scope.getName();
+		String userId = (String) msg.get("userId");
+		red5InGW.logoutEndMeeting(meetingId, userId);
+	}
+
 	public void setRed5Publisher(MessagePublisher red5InGW) {
 		this.red5InGW = red5InGW;
 	}

@@ -139,6 +139,13 @@ class UsersModel {
     uservos.values filter (u => u.role == VIEWER) toArray
   }
 
+  def isModerator(userId: String): Boolean = {
+    uservos.get(userId) match {
+      case Some(user) => return user.role == MODERATOR
+      case None => return false
+    }
+  }
+
   def getRegisteredUserWithUserID(userID: String): Option[RegisteredUser] = {
     regUsers.values find (ru => userID contains ru.id)
   }

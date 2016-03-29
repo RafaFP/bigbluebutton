@@ -140,4 +140,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
   <EventHandlers type="{RoleChangeEvent.ASSIGN_PRESENTER}">
     <MethodInvoker generator="{UserService}" method="assignPresenter" arguments="{event}" />
   </EventHandlers>
+
+  <EventHandlers type="{BBBEvent.LOGOUT_END_MEETING_EVENT}" >
+    <MethodInvoker generator="{UserService}" method="logoutEndMeeting" />
+  </EventHandlers>
 </EventMap>

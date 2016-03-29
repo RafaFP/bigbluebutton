@@ -49,7 +49,8 @@ public interface IBigBlueButtonInGW {
 	void getRecordingStatus(String meetingId, String userId);
 	void userConnectedToGlobalAudio(String voiceConf, String userid, String name);
 	void userDisconnectedFromGlobalAudio(String voiceConf, String userid, String name);
-	
+	void logoutEndMeeting(String meetingID, String userID);
+
 	// Voice
 	void initAudioSettings(String meetingID, String requesterID, Boolean muted);
 	void muteAllExceptPresenter(String meetingID, String requesterID, Boolean mute);

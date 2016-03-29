@@ -275,4 +275,9 @@ public class MessagePublisher {
 		ActivityResponseMessage msg = new ActivityResponseMessage(meetingID);
 		sender.send(MessagingConstants.TO_MEETING_CHANNEL, msg.toJson());
 	}
+
+	public void logoutEndMeeting(String meetingId, String userId) {
+		LogoutEndMeetingRequestMessage msg = new LogoutEndMeetingRequestMessage(meetingId, userId);
+		sender.send(MessagingConstants.TO_USERS_CHANNEL, msg.toJson());
+	}
 }

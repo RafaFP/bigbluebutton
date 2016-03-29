@@ -41,6 +41,7 @@ case class AssignPresenter(meetingID: String, newPresenterID: String, newPresent
 case class SetRecordingStatus(meetingID: String, userId: String, recording: Boolean) extends InMessage
 case class GetRecordingStatus(meetingID: String, userId: String) extends InMessage
 case class ActivityResponse(meetingID: String) extends InMessage
+case class LogoutEndMeeting(meetingID: String, userID: String) extends InMessage
 
 // Chat
 case class GetChatHistoryRequest(meetingID: String, requesterID: String, replyTo: String) extends InMessage
